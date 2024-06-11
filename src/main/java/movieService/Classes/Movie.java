@@ -1,4 +1,4 @@
-package pl.pjatk.MovieService;
+package movieService.Classes;
 
 import jakarta.persistence.*;
 

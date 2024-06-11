@@ -1,5 +1,7 @@
-package pl.pjatk.MovieService;
+package movieService.Service;
 
+import movieService.Classes.Movie;
+import movieService.Storage.MovieRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -76,9 +78,16 @@ public class MovieService {
         return updated;
     }
 
-    public Movie changeIsAvailable(int id){
+    public Movie isAvailable(int id){
         Movie movie = findMovieById(id).orElseThrow();
         movie.setAvailable(true);
+        movieRepository.save(movie);
+        return movie;
+    }
+
+    public Movie isNotAvailable(int id){
+        Movie movie = findMovieById(id).orElseThrow();
+        movie.setAvailable(false);
         movieRepository.save(movie);
         return movie;
     }

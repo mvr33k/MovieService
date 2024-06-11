@@ -1,5 +1,6 @@
-package pl.pjatk.MovieService;
+package movieService.Storage;
 
+import movieService.Classes.Movie;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

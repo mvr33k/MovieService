@@ -1,5 +1,7 @@
-package pl.pjatk.MovieService;
+package movieService.Controller;
 
+import movieService.Classes.Movie;
+import movieService.Service.MovieService;
 import org.apache.catalina.connector.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -43,10 +45,16 @@ public class MovieController {
         return ResponseEntity.ok(movieService.updateMovie(id, movie));
     }
 
-    @PatchMapping("/available/{id}")
+    @PutMapping("/available/{id}")
     public ResponseEntity<Movie> isAvailable(
             @PathVariable Integer id){
-        return ResponseEntity.ok(movieService.changeIsAvailable(id));
+        return ResponseEntity.ok(movieService.isAvailable(id));
+    }
+
+    @PutMapping("/notavailable/{id}")
+    public ResponseEntity<Movie> isNotAvailable(
+            @PathVariable Integer id){
+        return ResponseEntity.ok(movieService.isNotAvailable(id));
     }
 //    @DeleteMapping("/{id}")
 //    public ResponseEntity<Void> deleteMovie(

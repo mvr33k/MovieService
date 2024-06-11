@@ -1,4 +1,4 @@
-package pl.pjatk.MovieService;
+package movieService.Controller;
 
 
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package pl.pjatk.MovieService;
+package movieService;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
